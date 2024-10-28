@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# 3D Shape Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a 3D Shape Generator built with **React** and **Three.js**. It allows users to generate and visualize 3D shapes with customizable properties such as the number of sides and color. The app also includes a theme switcher to toggle between light and dark themes.
 
-## Available Scripts
+![3D Shape Generator](public/3d-shape-generator.gif)
 
-In the project directory, you can run:
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Generate 3D shapes with a customizable number of sides.
+- Change the color of the generated shape.
+- Rotate the shape for better visualization.
+- Toggle between light and dark themes.
+- Responsive design to fit different screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Brief Logic
 
-### `npm test`
+The main logic of the app is implemented in the `ShapeGenerator` component. It uses the `@react-three/fiber` library to render 3D shapes and the `@react-three/drei` library for additional utilities like `OrbitControls`. The shape is created using Three.js's `CylinderGeometry`, and its properties are updated based on user input.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The theme switching functionality is managed using a React context (`ThemeContext`). The current theme is stored in the context, and the `App` component uses this context to apply the appropriate styles.
 
-### `npm run build`
+## Important Libraries Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: A JavaScript library for building user interfaces.
+- **Three.js**: A library for creating 3D graphics in the browser.
+- **@react-three/fiber**: A React renderer for Three.js.
+- **@react-three/drei**: A collection of useful helpers for `@react-three/fiber`.
+- **react-scripts**: Scripts and configuration used by Create React App.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+```sh
+git clone https://github.com/your-username/my-3d-shape-app.git
+cd my-3d-shape-app
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install the dependencies,
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run the following command in the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the development server:
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Open http://localhost:3000 in your browser to view the app.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Additional Information
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). For more information on how to perform common tasks, you can refer to the [Create React App documentation](https://create-react-app.dev/docs/getting-started/).
